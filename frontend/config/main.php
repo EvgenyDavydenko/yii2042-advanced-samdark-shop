@@ -9,8 +9,10 @@ $params = array_merge(
 return [
     'id' => 'app-frontend',
     'basePath' => dirname(__DIR__),
+    'name' => 'Shop',
     'bootstrap' => ['log'],
     'controllerNamespace' => 'frontend\controllers',
+    'defaultRoute' => 'catalog/list',
     'components' => [
         'request' => [
             'csrfParam' => '_csrf-frontend',
@@ -36,14 +38,15 @@ return [
         'errorHandler' => [
             'errorAction' => 'site/error',
         ],
-        /*
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
             ],
         ],
-        */
+        'cart' => [
+            'class' => 'yz\shoppingcart\ShoppingCart',
+        ],
     ],
     'params' => $params,
 ];
