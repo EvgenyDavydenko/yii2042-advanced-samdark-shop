@@ -23,7 +23,7 @@ class Category extends \yii\db\ActiveRecord
     {
         return [
             [
-                'class' => SluggableBehavior::className(),
+                'class' => SluggableBehavior::class,
                 'attribute' => 'title',
                 'slugAttribute' => 'slug'
             ],
@@ -68,7 +68,7 @@ class Category extends \yii\db\ActiveRecord
      */
     public function getParent()
     {
-        return $this->hasOne(Category::className(), ['id' => 'parent_id']);
+        return $this->hasOne(Category::class, ['id' => 'parent_id']);
     }
 
     /**
@@ -76,7 +76,7 @@ class Category extends \yii\db\ActiveRecord
      */
     public function getCategories()
     {
-        return $this->hasMany(Category::className(), ['parent_id' => 'id']);
+        return $this->hasMany(Category::class, ['parent_id' => 'id']);
     }
 
     /**
@@ -84,6 +84,6 @@ class Category extends \yii\db\ActiveRecord
      */
     public function getProducts()
     {
-        return $this->hasMany(Product::className(), ['category_id' => 'id']);
+        return $this->hasMany(Product::class, ['category_id' => 'id']);
     }
 }

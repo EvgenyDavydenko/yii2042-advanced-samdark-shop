@@ -38,8 +38,8 @@ AppAsset::register($this);
     $itemsInCart = Yii::$app->cart->getCount();
     $menuItems = [
         ['label' => 'Admin', 'url' => '@backendWebroot'],
-        ['label' => 'About', 'url' => ['/site/about']],
-        ['label' => 'Contact', 'url' => ['/site/contact']],
+        // ['label' => 'About', 'url' => ['/site/about']],
+        // ['label' => 'Contact', 'url' => ['/site/contact']],
         ['label' => 'My cart' . ($itemsInCart ? " ($itemsInCart)" : ''), 'url' => ['/cart/list']],
     ];
     if (Yii::$app->user->isGuest) {
