@@ -9,3 +9,5 @@
 4.  Создал миграцию схемы БД магазина: `php yii migrate/create shop`. Накатил миграции
 
 5.  Сгенерировал модели common\models\Category, common\models\Product и common\models\Image для таблиц category, product и image
+
+6.  Создал контроллер для засева таблиц category и product фэйковыми данными
