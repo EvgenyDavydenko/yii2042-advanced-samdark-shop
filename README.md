@@ -11,3 +11,5 @@
 5.  Сгенерировал модели common\models\Category, common\models\Product и common\models\Image для таблиц category, product и image
 
 6.  Создал контроллер для засева таблиц category и product фэйковыми данными
+
+7.  MVC для отображения списка всех продуктов из всех категорий

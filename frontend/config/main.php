@@ -9,8 +9,10 @@ $params = array_merge(
 return [
     'id' => 'app-frontend',
     'basePath' => dirname(__DIR__),
+    'name' => 'Shop',
     'bootstrap' => ['log'],
     'controllerNamespace' => 'frontend\controllers',
+    'defaultRoute' => 'catalog/list',
     'components' => [
         'request' => [
             'csrfParam' => '_csrf-frontend',
