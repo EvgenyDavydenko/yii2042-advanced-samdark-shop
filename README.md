@@ -18,4 +18,6 @@
 
 9.  Backend CRUD MVC для Product
 
+10. Backend CRUD MVC для Image
+
 [на основе](https://github.com/samdark/yii2-shop)
