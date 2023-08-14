@@ -16,4 +16,6 @@
 
 8.  Backend CRUD MVC для Category
 
+9.  Backend CRUD MVC для Product
+
 [на основе](https://github.com/samdark/yii2-shop)
