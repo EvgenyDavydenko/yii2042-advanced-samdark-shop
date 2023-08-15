@@ -80,4 +80,34 @@ class Order extends \yii\db\ActiveRecord
     {
         return $this->hasMany(OrderItem::class, ['order_id' => 'id']);
     }
+
+    public function beforeSave($insert)
+    {
+        if (parent::beforeSave($insert)) {
+            if ($this->isNewRecord) {
+                $this->status = self::STATUS_NEW;
+            }
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public static function getStatuses()
+    {
+        return [
+            self::STATUS_DONE => 'Done',
+            self::STATUS_IN_PROGRESS => 'In progress',
+            self::STATUS_NEW => 'New',
+        ];
+    }
+
+    public function sendEmail()
+    {
+        return Yii::$app->mailer->compose('order', ['order' => $this])
+            ->setTo(Yii::$app->params['adminEmail'])
+            ->setFrom(Yii::$app->params['adminEmail'])
+            ->setSubject('New order #' . $this->id)
+            ->send();
+    }
 }

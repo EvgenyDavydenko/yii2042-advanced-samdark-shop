@@ -24,7 +24,7 @@ use yz\shoppingcart\CartPositionTrait;
 class Product extends \yii\db\ActiveRecord implements CartPositionInterface
 {
     use CartPositionTrait;
-    
+
     public function behaviors()
     {
         return [
@@ -116,20 +116,5 @@ class Product extends \yii\db\ActiveRecord implements CartPositionInterface
     public function getId()
     {
         return $this->id;
-    }
-
-    public function getCost($withDiscount = true)
-    {
-        // TODO: Implement getCost() method.
-    }
-
-    public function setQuantity($quantity)
-    {
-        // TODO: Implement setQuantity() method.
-    }
-
-    public function getQuantity()
-    {
-        // TODO: Implement getQuantity() method.
     }
 }
