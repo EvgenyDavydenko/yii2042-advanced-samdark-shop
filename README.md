@@ -20,4 +20,6 @@
 
 10. Backend CRUD MVC для Image
 
+11.  Сгенерировал модели common\models\Order и common\models\OrderItem для таблиц order и order_item
+
 [на основе](https://github.com/samdark/yii2-shop)
