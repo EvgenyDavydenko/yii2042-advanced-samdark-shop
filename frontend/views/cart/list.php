@@ -42,7 +42,7 @@ use \yii\helpers\Html;
             $<?= $product->getCost() ?>
         </div>
         <div class="col-xs-2">
-            <?= Html::a('Ã—', ['cart/remove', 'id' => $product->getId()], ['class' => 'btn btn-danger'])?>
+            <?= Html::a('×', ['cart/remove', 'id' => $product->getId()], ['class' => 'btn btn-danger'])?>
         </div>
     </div>
     <?php endforeach ?>

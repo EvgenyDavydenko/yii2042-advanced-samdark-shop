@@ -26,4 +26,6 @@
 
 13. Frontend CRUD MVC for cart
 
+14. Backend CRUD MVC for Order
+
 [на основе](https://github.com/samdark/yii2-shop)

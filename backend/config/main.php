@@ -13,6 +13,7 @@ return [
     'controllerNamespace' => 'backend\controllers',
     'bootstrap' => ['log'],
     'modules' => [],
+    'defaultRoute' => 'order/index',
     'components' => [
         'request' => [
             'csrfParam' => '_csrf-backend',
