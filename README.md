@@ -20,6 +20,8 @@
 
 10. Backend CRUD MVC для Image
 
-11.  Сгенерировал модели common\models\Order и common\models\OrderItem для таблиц order и order_item
+11. Сгенерировал модели common\models\Order и common\models\OrderItem для таблиц order и order_item
+
+12. компонент корзины можно добавть в этом месте, а не раньше, добавить компонент в контейнер в конфиге и в моделе Product имплементировать интерфейс
 
 [на основе](https://github.com/samdark/yii2-shop)

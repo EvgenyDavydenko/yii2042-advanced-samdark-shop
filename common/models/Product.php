@@ -4,6 +4,8 @@ namespace common\models;
 
 use Yii;
 use yii\behaviors\SluggableBehavior;
+use yz\shoppingcart\CartPositionInterface;
+use yz\shoppingcart\CartPositionTrait;
 
 /**
  * This is the model class for table "product".
@@ -19,8 +21,10 @@ use yii\behaviors\SluggableBehavior;
  * @property OrderItem[] $orderItems
  * @property Category $category
  */
-class Product extends \yii\db\ActiveRecord
+class Product extends \yii\db\ActiveRecord implements CartPositionInterface
 {
+    use CartPositionTrait;
+    
     public function behaviors()
     {
         return [
@@ -96,5 +100,36 @@ class Product extends \yii\db\ActiveRecord
     public function getCategory()
     {
         return $this->hasOne(Category::class, ['id' => 'category_id']);
+    }
+
+    /**
+     * @inheritdoc
+     */
+    public function getPrice()
+    {
+        return $this->price;
+    }
+
+    /**
+     * @inheritdoc
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    public function getCost($withDiscount = true)
+    {
+        // TODO: Implement getCost() method.
+    }
+
+    public function setQuantity($quantity)
+    {
+        // TODO: Implement setQuantity() method.
+    }
+
+    public function getQuantity()
+    {
+        // TODO: Implement getQuantity() method.
     }
 }
